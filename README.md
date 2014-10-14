@@ -1,7 +1,7 @@
 test
 ====
 
-Middleman 
+Middleman\n 
 Following examples are implemented.
 
 Two Layout
