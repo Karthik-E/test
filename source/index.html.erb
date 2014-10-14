@@ -1,0 +1,21 @@
+---
+title: Welcome to Middleman
+---
+<%= partial("partials/header") %>
+<div class="welcome">
+  <h1>Middleman is Watching</h1>
+	Today is <%= Time.now.strftime('%A') %>.
+  
+</div><!-- .welcome -->
+
+<h2>Friends List</h2>
+<ol>
+  <% data.people.friends.each do |f| %>
+  <%= f.name %>
+  <!--<li><%= I18n.t(:about) %> <%= link_to f.name, '/about/' << f.name << '.html' %>-->
+  <% end %>
+</ol>
+<% data.people.friends.each do |f|
+  proxy "/about/#{f.name}.html", "/about/template.html", :locals => { :person => f.name, :desc => f.desc }, :ignore => true
+end %>
+<%= partial("partials/footer") %>

@@ -1,0 +1,24 @@
+---
+title: Welcome to Middleman
+---
+<%= partial("partials/header") %>
+<div class="welcome">
+  <h1><%= I18n.t(:frontend) %></h1>
+	Today is <%= Time.now.strftime('%A') %>.
+  
+</div><!-- .welcome -->
+
+<h2>Friends List</h2>
+<ol>
+  <% data.people.friends.each do |f| %>
+  <li><%= I18n.t(:about) %> <%= link_to f.name, '/about/' << f.name << '.html' %></li>
+  <% end %>
+</ol>
+<% data.people.friends.each do |f|
+  proxy "/about/#{f.name}.html", "/about/template.html", :locals => { :person => f.name, :desc => f.desc }, :ignore => true
+end %>
+
+This is sample eRuby file<br>
+The current time here is <%=Time.now%>.
+
+<%= partial("partials/footer") %>

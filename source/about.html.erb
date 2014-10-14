@@ -1,0 +1,15 @@
+---
+title: Welcome to Middleman
+---
+<%= partial("partials/header") %>
+<div class="welcome">
+ 
+	Today is <%= Time.now.strftime('%A') %>.
+  
+</div><!-- .welcome -->
+
+<h2>Hi <%= @person %>!</h2>
+<%= partial "partials/about", locals: { person: "herp derp" } %>
+<%= req.params["person"]%>
+
+<%= partial("partials/footer") %>

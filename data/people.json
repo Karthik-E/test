@@ -1,0 +1,18 @@
+{
+  "friends": [{
+    "name": "Tom",
+    "userimage": "ii/dfdf",
+    "desc": "Tom is a very funny"
+  },
+  {
+    "name": "Dick",
+    "userimage": "ghgh",
+    "desc": "Dick is very Bad"
+  },
+  {
+    "name": "Harry",
+    "userimage": "ghgh",
+    "desc": "Harry is Good"
+  }
+  ]
+}
